@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exemplo com autoescape</title>
+    </head>
+    <body>
+        <h1>Colocar um monte de vezes o safe é chato:</h1>
+        <p>{{nao_deve_passar_por_escaping[0] | safe}}</p>
+        <p>{{nao_deve_passar_por_escaping[1] | safe}}</p>
+        <p>{{nao_deve_passar_por_escaping[2] | safe}}</p>
+        <p>{{nao_deve_passar_por_escaping[3] | safe}}</p>
+        <p>{{variavel_que_precisa_de_escaping}}</p>
+        <p>{{nao_deve_passar_por_escaping[4] | safe}}</p>
+        <p>{{nao_deve_passar_por_escaping[5] | safe}}</p>
+        <p>{{nao_deve_passar_por_escaping[6] | safe}}</p>
+        <p>{{nao_deve_passar_por_escaping[7] | safe}}</p>
+
+        <h1>Para isso, podemos desabilitar o autoescape:</h1>
+        {% autoescape false %}
+            <p>{{nao_deve_passar_por_escaping[0]}}</p>
+            <p>{{nao_deve_passar_por_escaping[1]}}</p>
+            <p>{{nao_deve_passar_por_escaping[2]}}</p>
+            <p>{{nao_deve_passar_por_escaping[3]}}</p>
+            {% autoescape true %}
+                <p>{{variavel_que_precisa_de_escaping}}</p>
+            {% endautoescape %}
+            <p>{{nao_deve_passar_por_escaping[4]}}</p>
+            <p>{{nao_deve_passar_por_escaping[5]}}</p>
+            <p>{{nao_deve_passar_por_escaping[6]}}</p>
+            <p>{{nao_deve_passar_por_escaping[7]}}</p>
+        {% endautoescape %}
+
+        <h1>Adicionando o "e" só em um deles:</h1>
+        {% autoescape false %}
+            <p>{{nao_deve_passar_por_escaping[0]}}</p>
+            <p>{{nao_deve_passar_por_escaping[1]}}</p>
+            <p>{{nao_deve_passar_por_escaping[2]}}</p>
+            <p>{{nao_deve_passar_por_escaping[3]}}</p>
+            <p>{{variavel_que_precisa_de_escaping | e}}</p>
+            <p>{{nao_deve_passar_por_escaping[4]}}</p>
+            <p>{{nao_deve_passar_por_escaping[5]}}</p>
+            <p>{{nao_deve_passar_por_escaping[6]}}</p>
+            <p>{{nao_deve_passar_por_escaping[7]}}</p>
+        {% endautoescape %}
+    </body>
+</html>

@@ -26,6 +26,9 @@ modelo_html = """
     </body>
 </html>"""
 
+def escape(texto):
+    return texto.replace("&", "&amp;").replace(">", "&gt;").replace("<", "&lt;").replace('"', "&#34;").replace("'", "&#39;")
+
 def mostrar_comentarios():
     html = modelo_html
     if len(lista_comentarios) == 0:
@@ -33,8 +36,7 @@ def mostrar_comentarios():
     else:
         parte = ""
         for comentario in lista_comentarios:
-            comentario_ok = comentario.replace("&", "&amp;").replace(">", "&gt;").replace("<", "&lt;").replace('"', "&#34;").replace('"', "&#39;")
-            parte += "<p>" + comentario_ok + "</p>"
+            parte += "<p>" + escape(comentario) + "</p>"
         html = html.replace("XXXX", parte)
     return html
 
