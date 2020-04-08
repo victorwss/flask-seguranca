@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Comentários</title>
+        <style>
+            textarea {
+                min-width: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Comentários:</h1>
+        {% if comentarios|length == 0 %}
+            <p>Não há nenhum comentário ainda... Escreva o primeiro!</p>
+        {% else %}
+            {% for comentario in comentarios %}
+                <p>{{comentario}}</p>
+            {% endfor %}
+        {% endif %}
+        <h2>Deixe seu comentário:</h2>
+        <form action="./comentarios" method="POST">
+            <p><textarea name="texto"></textarea></p>
+            <p><button type="submit">Enviar</button></p>
+        </form>
+    </body>
+</html>

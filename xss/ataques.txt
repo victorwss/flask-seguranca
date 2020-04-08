@@ -1,0 +1,5 @@
+<span style="color: red">Mwahaahahah</span>
+
+<script type="text/javascript">window.location = "http://127.0.0.1:7000";</script>
+
+
