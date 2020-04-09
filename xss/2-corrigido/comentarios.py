@@ -5,7 +5,7 @@ lista_comentarios = []
 
 modelo_html = """
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <title>Comentários</title>
