@@ -1,10 +1,8 @@
 from sys import argv
 
-tabela = {}
-
-alfabeto = 'abcdefghijklmnopqrstuvwxyz'
-
 def rot(chave, texto):
+    tabela = {}
+    alfabeto = 'abcdefghijklmnopqrstuvwxyz'
     for a in range(0, 26):
         tabela[alfabeto[a]] = alfabeto[(a + 26 + chave) % 26]
         tabela[alfabeto[a].upper()] = alfabeto[(a + 26 + chave) % 26].upper()
