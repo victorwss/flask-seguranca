@@ -1,0 +1,5 @@
+Dollynho.jpg
+hogwarts.png
+../baixador.py
+../../../top-secret/planos-secretos-da-nova-estrela-da-morte.jpg
+../../../top-secret/senhas-super-secretas-e-absolutamente-sigilosas.json
