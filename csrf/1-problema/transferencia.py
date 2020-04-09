@@ -68,4 +68,4 @@ def transferir():
     return render_template("bem-vindo.html", usuario_atual = login, usuarios = usuarios)
 
 if __name__ == "__main__":
-    app.run(port = 2020)
+    app.run(port = 2020, host = "127.0.0.101")
