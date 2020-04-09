@@ -1,0 +1,21 @@
+SQL injection:
+    https://owasp.org/www-community/attacks/SQL_Injection
+    https://cwe.mitre.org/data/definitions/89.html
+
+XSS:
+    https://owasp.org/www-community/attacks/xss/
+    https://cwe.mitre.org/data/definitions/79.html
+
+CSRF:
+    https://owasp.org/www-community/attacks/csrf
+    https://cwe.mitre.org/data/definitions/352.html
+
+Path traversal:
+    https://owasp.org/www-community/attacks/Path_Traversal
+    https://cwe.mitre.org/data/definitions/22.html
+
+Remote code execution:
+    https://cwe.mitre.org/data/definitions/78.html
+
+Outros:
+    https://cwe.mitre.org/top25/archive/2019/2019_cwe_top25.html
