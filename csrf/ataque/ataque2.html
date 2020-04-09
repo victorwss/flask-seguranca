@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>E-mail</title>
+        <style>
+            main {
+                display: flex;
+            }
+
+            aside {
+                background-color: #80ff80;
+            }
+
+            .legenda {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                font-size: 15pt;
+            }
+
+            content {
+                border-size: 1px;
+                border-color: black;
+                border-style: solid;
+                background-color: #c0c0ff;
+                padding: 10px;
+                margin: 10px;
+            }
+
+            footer {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <aside>
+                <img width="200" src="./hogwarts.png" class="logo">
+                <p class="legenda">HogwartsMail</p>
+            </aside>
+            <content>
+                <header>
+                    <div class="de">De: Um amigo que gosta muito de você &lt;amigo.do.harry@horcrux.mag.hg&gt;</div>
+                    <div class="para">Para: Harry Potter &lt;harry.potter@grifinoria.mag.hg&gt;</div>
+                </header>
+                <div>
+                    <p>Olá Harry.</p>
+                    <p>O Dumbledore pediu para você ver as fotos que o Hagrid tirou de você junto com a Hermione.</p>
+                    <p>Veja as fotos <a href="http://localhost:2021/">aqui</a>.</p>
+                </div>
+                <div class="botoes">
+                    <button type="button">Responder</button> <button type="button">Encaminhar</button>
+                </div>
+            </content>
+        </main>
+        <footer>HogwartsMail &copy; &mdash; 2020</footer>
+    </body>
+</html>

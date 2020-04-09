@@ -1,22 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <title>Login</title>
         <style>
-            .senha-errada {
-                color: red;
+            .mensagem, .erro {
                 font-weight: bold;
+                padding: 10px;
+                margin: 10px;
+                border-style: solid;
+                border-color: black;
+            }
+            .mensagem {
+                color: #008000;
+                background-color: #80ff80;
+            }
+            .erro {
+                color: #800000;
+                background-color: #ff8080;
             }
         </style>
     </head>
     <body>
-        {% if senha_errada %}
-            <p class="senha-errada">Senha errada! Tente novamente</p>
+        {% if mensagem %}
+            <p class="mensagem">{{mensagem}}</p>
+        {% endif %}
+        {% if erro %}
+            <p class="erro">{{erro}}</p>
         {% endif %}
         <form action="./login" method="POST">
-            <p><label>Login:</label><input type="text" name="login" /></p>
-            <p><label>Senha:</label><input type="password" name="senha" /></p>
+            <p><label for="login">Login:</label> <input type="text" name="login" id="login" /></p>
+            <p><label for="senha">Senha:</label> <input type="password" name="senha" id="senha" /></p>
             <p><button type="submit">Enviar</button></p>
         </form>
     </body>

@@ -1,10 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <title>Login</title>
+        <style>
+            th {
+                background-color: #8080ff;
+                color: white;
+                font-weight: bold;
+                text-alignment: center;
+            }
+
+            td {
+                background-color: white;
+                color: black;
+                font-weight: bold;
+                text-alignment: left;
+            }
+
+            td.saldo {
+                text-align: right;
+            }
+        </style>
     </head>
     <body>
-        <h1>Seja bem-vindo, {{usuario['login']}}.</h1>
+        <h1>Seja bem-vindo, {{usuario_atual}}.</h1>
+
+        <h2>Contas bancárias:</h2>
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Saldo</th>
+            </tr>
+            {% for nome in usuarios %}
+                <tr>
+                    <td>{{nome}}</td>
+                    <td class="saldo">H$ {{"%.2f"|format(usuarios[nome]['saldo'])}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <h2>Remessa de dinheiro:</h2>
+        <form action="./transferir" method="GET">
+            <p><label for="destinatario">Destinatário:</label> <input type="text" name="destinatario" id="destinatario" /></p>
+            <p><label for="valor">Valor:</label> <input type="text" name="valor" id="valor" /></p>
+            <p><button type="submit">Enviar</button></p>
+        </form>
+        <form action="/logout" method="POST">
+            <p><button type="submit">Logout</button></p>
+        </form>
     </body>
 </html>
