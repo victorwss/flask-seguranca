@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/hash senhas/1-plaintext/teste.db
+/hash senhas/2-criptografado/teste.db
+/hash senhas/3-hashsimples/teste.db
+/hash senhas/4-hashlib/teste.db
+/hash senhas/5-hashlibsal/teste.db
+/hash senhas/6-bcrypt/teste.db
+/remote code execution/1-problema/x.py
+/sql injection/1-problema/banco.db
+/sql injection/2-ok/banco.db
