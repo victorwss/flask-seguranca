@@ -19,8 +19,10 @@ def rot():
         int(chave)
     except x:
         return ":(", 400
-    
-    out = Popen(f'python rot.py {chave} {solucao_gambiarra(texto)}', shell = True, stdout = PIPE).communicate()[0]
+
+    comando = f'python rot.py {chave} {solucao_gambiarra(texto)}'
+    print(comando)
+    out = Popen(comando, shell = True, stdout = PIPE).communicate()[0]
     return out
 
 if __name__ == "__main__":
